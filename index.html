@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sec 1 G3 Geometry: Holographic Math Lab</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      
+      <a-entity environment="preset: contact; skyColor: #0a0a0a; grid: 1x1"></a-entity>
+
+      <a-text value="Identify the Base Area and Volume" position="-1.5 3.5 -3" color="#FFFFFF" scale="1.5 1.5 1.5"></a-text>
+
+      <a-entity position="-2 1 -3">
+        <a-cone radius-bottom="0.8" height="1.5" color="#4CC3D9" opacity="0.7" 
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear">
+        </a-cone>
+        <a-circle radius="0.81" rotation="-90 0 0" position="0 -0.75 0" color="#FFC65C" side="double"></a-circle>
+        <a-text value="Cone" position="-0.3 -1.2 0" color="#FFF"></a-text>
+      </a-entity>
+
+      <a-entity position="0 1.2 -3">
+        <a-sphere radius="0.9" color="#EF2D5E" opacity="0.8" wireframe="true"
+                  animation="property: position; dir: alternate; dur: 2000; to: 0 1.5 -3; loop: true">
+        </a-sphere>
+        <a-text value="Sphere" position="-0.4 -1.4 0" color="#FFF"></a-text>
+      </a-entity>
+
+      <a-entity position="2 1 -3">
+        <a-cylinder radius="0.8" height="1.5" segments-radial="3" color="#7BC8A4" opacity="0.7"
+                    animation="property: rotation; to: 360 360 0; loop: true; dur: 7000; easing: linear">
+        </a-cylinder>
+        <a-circle radius="0.81" segments="3" rotation="-90 0 0" position="0 0.75 0" color="#FFC65C" side="double"></a-circle>
+        <a-circle radius="0.81" segments="3" rotation="-90 0 0" position="0 -0.75 0" color="#FFC65C" side="double"></a-circle>
+        <a-text value="Triangular Prism" position="-0.8 -1.2 0" color="#FFF"></a-text>
+      </a-entity>
+
+      <a-camera position="0 1.6 0">
+        <a-cursor color="#FFF" fuse="true" timeout="1500"></a-cursor>
+      </a-camera>
+
+    </a-scene>
+  </body>
+</html>
